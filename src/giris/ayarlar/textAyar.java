@@ -19,17 +19,6 @@ public class textAyar {
     private static String originalText;
     private static Color originalFgColor;
 
-    
-    public static void LimitAyari(JTextField textField){
-        int boyut = textField.getText().trim().length();
-        int lim = 11;
-        
-        if(boyut != lim){
-            
-            JOptionPane.showMessageDialog(textField, "11 karakter olmalı");
-        }
-      
-    }
     public static void metinKontrol(JTextField textField, String org) {
         originalText = org;
         if (textField.getText().trim().equals(org)) {
@@ -123,6 +112,5 @@ public class textAyar {
         });
         
     }
-    
-    
+
 }

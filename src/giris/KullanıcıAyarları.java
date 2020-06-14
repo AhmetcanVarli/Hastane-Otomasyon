@@ -1,4 +1,3 @@
-
 package giris;
 
 import database.IBilgiKontrol;
@@ -12,7 +11,6 @@ import giris.ayarlar.IconAyarları;
 import giris.ayarlar.textAyar;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
 
 public class KullanıcıAyarları extends javax.swing.JFrame implements IDuzenleyici, IBilgiKontrol{
 
@@ -84,6 +82,7 @@ public class KullanıcıAyarları extends javax.swing.JFrame implements IDuzenle
         KayıtSilButon = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Kullanıcı Ayarları");
 
         KullanıcıAyarPanel.setBackground(new java.awt.Color(0, 153, 153));
 

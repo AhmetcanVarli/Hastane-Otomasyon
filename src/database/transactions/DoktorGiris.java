@@ -36,7 +36,7 @@ public class DoktorGiris extends DbConnection implements IBilgiKontrol {
     }
 
     private boolean girisDBasarilimi() {
-        String query = "SELECT tc_no,sifre FROM doktorlar WHERE tc_no = '" + this.doktorKimlik + "'" + "AND sifre = '" + this.sifre + "'";
+        String query = "SELECT TcNo,Sifre FROM doktorlar WHERE TcNo = '" + this.doktorKimlik + "'" + "AND Sifre = '" + this.sifre + "'";
         try {
             super.statement = super.connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -45,7 +45,6 @@ public class DoktorGiris extends DbConnection implements IBilgiKontrol {
             }
         } catch (SQLException ex) {
             Logger.getLogger(DoktorGiris.class.getName()).log(Level.SEVERE, null, ex);
-           // System.out.println("Yanlış");
         }
         return false;
     }
@@ -77,8 +76,5 @@ public class DoktorGiris extends DbConnection implements IBilgiKontrol {
 
     public void setSifre(String sifre) {
         this.sifre = sifre;
-    }
-
-    
-    
+    } 
 }

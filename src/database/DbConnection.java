@@ -1,4 +1,3 @@
-
 package database;
 
 import java.sql.Connection;
@@ -7,7 +6,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.sql.Statement;
-
 
 public class DbConnection {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -35,8 +33,5 @@ public class DbConnection {
 
     public Connection returnConnection(){
         return connection;
-    }
-    
-    
-    
+    }     
 }

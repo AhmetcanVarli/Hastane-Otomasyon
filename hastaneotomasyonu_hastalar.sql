@@ -23,17 +23,16 @@ DROP TABLE IF EXISTS `hastalar`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `hastalar` (
-  `tc_no` varchar(11) NOT NULL,
-  `ad` varchar(45) NOT NULL,
-  `soyad` varchar(45) DEFAULT NULL,
-  `cinsiyet` varchar(45) DEFAULT NULL,
-  `telefon` varchar(11) DEFAULT NULL,
-  `sifre` varchar(45) DEFAULT NULL,
-  `sifre_tekrar` varchar(45) DEFAULT NULL,
-  `guvenlik_sorusu` varchar(45) DEFAULT NULL,
-  `guvenlik_cevap` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`tc_no`),
-  UNIQUE KEY `tc_no_UNIQUE` (`tc_no`)
+  `TcNo` varchar(11) NOT NULL,
+  `Ad` varchar(45) NOT NULL,
+  `Soyad` varchar(45) DEFAULT NULL,
+  `Cinsiyet` varchar(45) DEFAULT NULL,
+  `Telefon` varchar(11) DEFAULT NULL,
+  `Sifre` varchar(45) DEFAULT NULL,
+  `GuvenlikSorusu` varchar(45) DEFAULT NULL,
+  `GuvenlikCevap` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`TcNo`),
+  UNIQUE KEY `tc_no_UNIQUE` (`TcNo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -43,7 +42,7 @@ CREATE TABLE `hastalar` (
 
 LOCK TABLES `hastalar` WRITE;
 /*!40000 ALTER TABLE `hastalar` DISABLE KEYS */;
-INSERT INTO `hastalar` VALUES ('11111111111','Ahmetcan','Varlı','ERKEK','55555468798','1234','1234','Ya da rastgale cümle giriniz(önerilir).','JAVA'),('55555555555','Niilgün','Varlı','KADIN ','46513268465','123456','640235','İlkokul öğretmeninizin adı nedir?','Sadık'),('78945612345','Dorukan','Eskiçeri','ERKEK','98789789879','drk99','drk99','İlkokul öğretmeninizin adı nedir?','Mehmet');
+INSERT INTO `hastalar` VALUES ('11111111111','Ahmetcan','Varlı','ERKEK','05555555555','1234','Ya da rastgale cümle giriniz(önerilir).','Java'),('22222222222','Dorukan','Eskiçeri','ERKEK','05444444443','1235','Ya da rastgale cümle giriniz(önerilir).','Otomasyon');
 /*!40000 ALTER TABLE `hastalar` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-14  2:21:47
+-- Dump completed on 2020-06-14 22:25:56

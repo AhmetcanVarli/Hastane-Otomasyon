@@ -2,12 +2,10 @@ package database.transactions;
 
 import database.DbConnection;
 import database.IBilgiKontrol;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import giris.HastaEkranı;
 
 public class HastaGiris extends DbConnection implements IBilgiKontrol {
@@ -37,7 +35,7 @@ public class HastaGiris extends DbConnection implements IBilgiKontrol {
     }
 
     private boolean girisBasarilimi() {
-        String query = "SELECT tc_no,sifre FROM hastalar WHERE tc_no = '" + this.hastaKimlik + "'" + " AND sifre = '" + this.sifre + "'";
+        String query = "SELECT TcNo,Sifre FROM hastalar WHERE TcNo = '" + this.hastaKimlik + "'" + " AND Sifre = '" + this.sifre + "'";
 
         try {
             super.statement = super.connection.createStatement();
@@ -48,7 +46,6 @@ public class HastaGiris extends DbConnection implements IBilgiKontrol {
             }
         } catch (SQLException ex) {
             Logger.getLogger(HastaGiris.class.getName()).log(Level.SEVERE, null, ex);
-           // System.out.println("yanlıs girildi");
         }
         return false;
     }
@@ -73,5 +70,4 @@ public class HastaGiris extends DbConnection implements IBilgiKontrol {
     public void setSifre(String sifre) {
         this.sifre = sifre;
     }
-
 }

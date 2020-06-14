@@ -52,11 +52,11 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="TCnoLabel" min="-2" pref="160" max="-2" attributes="0"/>
-                              <Component id="CevapLabel" linkSize="1" alignment="1" min="-2" pref="96" max="-2" attributes="0"/>
                               <Component id="EskiSifreLabel" alignment="1" min="-2" pref="137" max="-2" attributes="0"/>
-                              <Component id="YeniSifreLabel" linkSize="1" alignment="1" min="-2" pref="137" max="-2" attributes="0"/>
+                              <Component id="YeniSifreLabel" alignment="1" min="-2" pref="137" max="-2" attributes="0"/>
                               <Component id="telefonNoLabel" alignment="1" min="-2" pref="160" max="-2" attributes="0"/>
                               <Component id="SifreTekrarLabel" min="-2" pref="202" max="-2" attributes="0"/>
+                              <Component id="CevapLabel" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -129,7 +129,7 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="CEVAP:"/>
+            <Property name="text" type="java.lang.String" value="G&#xdc;VENL&#x130;K CEVAP:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="YeniSifreLabel">

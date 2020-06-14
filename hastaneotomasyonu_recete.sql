@@ -23,13 +23,14 @@ DROP TABLE IF EXISTS `recete`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `recete` (
-  `HastaTc` varchar(45) DEFAULT NULL,
+  `HastaTc` varchar(11) NOT NULL,
   `HastaAdı` varchar(45) DEFAULT NULL,
   `HastaSoyad` varchar(45) DEFAULT NULL,
-  `DoktorAdı` varchar(45) NOT NULL,
-  `Recete` varchar(250) DEFAULT NULL,
+  `DoktorAdı` varchar(45) DEFAULT NULL,
+  `Recete` varchar(45) DEFAULT NULL,
   `ReceteTarihi` varchar(45) DEFAULT NULL,
-  `ReceteSaati` varchar(45) DEFAULT NULL
+  `ReceteSaati` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`HastaTc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,7 +40,7 @@ CREATE TABLE `recete` (
 
 LOCK TABLES `recete` WRITE;
 /*!40000 ALTER TABLE `recete` DISABLE KEYS */;
-INSERT INTO `recete` VALUES ('11111111111',NULL,NULL,'Mehmet','Dikkat et Gardaş','Çarşamba','09:30'),('55555555555',NULL,NULL,'Emine Çetin','dikkatli ol sinir yapma iki kutu ilaç yazdım al onları','Cuma','14:30'),('22222222222',NULL,NULL,'Fatma Arslan','aaaaaaaaaa\r\nbbbbbbbbbbbbbbbbbbbbbbbbbb\r\ncccccccccccccccccccccccccccc\r\nddddddddddddddddddddddddd\r\neeeeeeeeeeeeeeeeeeeeeeeeeeeeee\r\nff\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','Salı','16.00'),('55555555555','Niilgün','Varlı','Fatma Arslan','sa gardas','Perşembe','09:00'),('11111111111','Ahmetcan','Varlı','Fatma Arslan','asdsasdasdadsa\r\ndasdas\r\nd\r\nasd\r\nasd\r\nsad\r\nasd\r\nadas','Çarşamba','09:30'),('11111111111','Ahmetcan','Varlı','Fatma Arslan','sa beyler cs go\r\n','Çarşamba','09:00');
+INSERT INTO `recete` VALUES ('22222222222','Dorukan','Eskiçeri','Emine Çetin','Deneme Reçete','Salı','09:30');
 /*!40000 ALTER TABLE `recete` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-14  2:21:48
+-- Dump completed on 2020-06-14 22:25:56

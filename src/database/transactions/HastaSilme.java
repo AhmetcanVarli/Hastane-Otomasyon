@@ -15,7 +15,7 @@ public class HastaSilme extends DbConnection implements IBilgiKontrol{
     
     public boolean kayıtSil(){
         if(bilgilerGecerliMi()){
-           String query = "DELETE FROM hastalar WHERE tc_no = '" + this.hasta + "'";
+           String query = "DELETE FROM hastalar WHERE TcNo = '" + this.hasta + "'";
             try {
                 super.statement = super.connection.createStatement();
                 statement.execute(query); 
@@ -27,7 +27,6 @@ public class HastaSilme extends DbConnection implements IBilgiKontrol{
             return false;
         }  
     }
-
     @Override
     public boolean bilgilerGecerliMi() {
         return !(this.hasta == null);
@@ -37,5 +36,4 @@ public class HastaSilme extends DbConnection implements IBilgiKontrol{
     public HesapBilgileri getHesapBilgileri() {
         return HesapBilgileri.getInstance();
     }
-    
 }

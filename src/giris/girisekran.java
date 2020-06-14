@@ -1,6 +1,5 @@
 package giris;
 
-
 import database.DbConnection;
 import giris.ayarlar.ActionAyarları;
 import giris.ayarlar.IDuzenleyici;
@@ -15,7 +14,6 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
         initComponents();
         Duzenle();
         new DbConnection();
-        
     }
 
     @Override
@@ -23,8 +21,6 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
         this.setLocationRelativeTo(null);
         girisPanel.setFocusable(true);
     }
-    
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -36,8 +32,7 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
         doktor_girisButon = new javax.swing.JButton();
         DoktorLabel = new javax.swing.JLabel();
         HastaLabel = new javax.swing.JLabel();
-        covidLabel = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hastane Otomasyonu");
@@ -88,20 +83,7 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
 
         HastaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/giris/iconlar/HastaGiris.png"))); // NOI18N
 
-        covidLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/giris/iconlar/covid.png"))); // NOI18N
-        covidLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                covidLabelMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                covidLabelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                covidLabelMouseExited(evt);
-            }
-        });
-
-        jTextField1.setText("COVİD-19 BİLGİLENDİRME");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/giris/iconlar/saglık_bakanlıgı.png"))); // NOI18N
 
         javax.swing.GroupLayout girisPanelLayout = new javax.swing.GroupLayout(girisPanel);
         girisPanel.setLayout(girisPanelLayout);
@@ -110,49 +92,43 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
             .addGroup(girisPanelLayout.createSequentialGroup()
                 .addGap(127, 127, 127)
                 .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(girisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(girisPanelLayout.createSequentialGroup()
-                        .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(HastaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hasta_girisButon, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(137, 137, 137)
-                        .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(doktor_girisButon)
-                            .addComponent(DoktorLabel))))
-                .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HastaLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hasta_girisButon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(103, 103, 103)
+                        .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(DoktorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(doktor_girisButon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(68, 68, 68))
                     .addGroup(girisPanelLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(covidLabel))
-                    .addGroup(girisPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                        .addComponent(girisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addComponent(jLabel1)))
+                .addGap(57, 57, 57))
         );
-
-        girisPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {doktor_girisButon, hasta_girisButon});
-
         girisPanelLayout.setVerticalGroup(
             girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(girisPanelLayout.createSequentialGroup()
-                .addComponent(girisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(girisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(girisPanelLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel1)))
                 .addGroup(girisPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(girisPanelLayout.createSequentialGroup()
-                        .addComponent(HastaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(hasta_girisButon, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67))
+                        .addGap(32, 32, 32)
+                        .addComponent(DoktorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(doktor_girisButon, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60))
                     .addGroup(girisPanelLayout.createSequentialGroup()
-                        .addComponent(DoktorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(doktor_girisButon, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73))))
-            .addGroup(girisPanelLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(covidLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(HastaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(hasta_girisButon, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58))))
         );
 
         girisPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {doktor_girisButon, hasta_girisButon});
@@ -170,8 +146,7 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   
-    
+      
     // BUTON RENKLENDİRME
     private void hasta_girisButonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hasta_girisButonMouseEntered
         butonAyar.setBgFg(hasta_girisButon, Color.BLUE,Color.RED);
@@ -200,18 +175,6 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
     private void doktor_girisButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doktor_girisButonActionPerformed
         ActionAyarları.setVisible(this, new DoktorEkranı());
     }//GEN-LAST:event_doktor_girisButonActionPerformed
-
-    private void covidLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_covidLabelMouseEntered
-        IconAyarları.IconDegis(covidLabel, "covid2");
-    }//GEN-LAST:event_covidLabelMouseEntered
-
-    private void covidLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_covidLabelMouseExited
-        IconAyarları.originalIcon(covidLabel);
-    }//GEN-LAST:event_covidLabelMouseExited
-
-    private void covidLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_covidLabelMouseClicked
-        ActionAyarları.setVisible(this, new covid19BilgiEkrani());
-    }//GEN-LAST:event_covidLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -251,11 +214,10 @@ public class girisekran extends javax.swing.JFrame implements IDuzenleyici{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DoktorLabel;
     private javax.swing.JLabel HastaLabel;
-    private javax.swing.JLabel covidLabel;
     private javax.swing.JButton doktor_girisButon;
     private javax.swing.JLabel girisLabel;
     private javax.swing.JPanel girisPanel;
     private javax.swing.JButton hasta_girisButon;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

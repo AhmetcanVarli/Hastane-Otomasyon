@@ -40,7 +40,7 @@ public class Randevular extends javax.swing.JFrame implements IBilgiKontrol{
         goruntuleButon = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Randevular");
+        setTitle("Randevularım");
         setResizable(false);
 
         RandevularPanel.setBackground(new java.awt.Color(0, 153, 153));
@@ -125,7 +125,7 @@ public class Randevular extends javax.swing.JFrame implements IBilgiKontrol{
         Connection con;
         DbConnection dcon = new DbConnection();
         con = dcon.returnConnection();
-        String query = "SELECT hasta_ad,hasta_soyad,hasta_tc_no,klinik,tarih,saat FROM randevular WHERE doktor_ad_soyad = '" + getHesapBilgileri().getDoktorAd() + " " + getHesapBilgileri().getDoktorSoyad() + "'";
+        String query = "SELECT HastaAd,HastaSoyad,HastaTcNo,Klinik,Tarih,Saat FROM randevular WHERE DoktorAdSoyad = '" + getHesapBilgileri().getDoktorAd() + " " + getHesapBilgileri().getDoktorSoyad() + "'";
         Statement stmt;
         ResultSet rs;
         try {

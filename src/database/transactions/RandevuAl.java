@@ -1,21 +1,15 @@
 package database.transactions;
 
-import giris.RandevuGecmisi;
 import database.DbConnection;
 import database.IBilgiKontrol;
-import giris.HastaEkranı;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JTable;
-import net.proteanit.sql.DbUtils;
 
 public class RandevuAl extends DbConnection implements IBilgiKontrol {
-
-    RandevuGecmisi randevuGecmisiObject = new RandevuGecmisi();
-    
+ 
     private String hastaTc = null, hastaAd = null, hastaSoyad = null;
     private String klinik = null, tarih = null, saat = null, doktorAd = null;
 
@@ -32,7 +26,7 @@ public class RandevuAl extends DbConnection implements IBilgiKontrol {
     }
 
     private void randevuaKaydet() {
-        String query = "INSERT INTO randevular(hasta_tc_no,hasta_ad,hasta_soyad,klinik,doktor_ad_soyad,tarih,saat)"
+        String query = "INSERT INTO randevular(HastaTcNo,HastaAd,HastaSoyad,Klinik,DoktorAdSoyad,Tarih,Saat)"
                 + " VALUES("
                 + "'" + this.hastaTc + "',"
                 + "'" + this.hastaAd + "',"
@@ -51,18 +45,6 @@ public class RandevuAl extends DbConnection implements IBilgiKontrol {
             Logger.getLogger(RandevuAl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
-
-    public RandevuGecmisi getRandevuGecmisiObject() {
-        if(randevuGecmisiObject == null){
-            randevuGecmisiObject = new RandevuGecmisi();
-        }
-        return randevuGecmisiObject;
-    }
-    
-   
-
     @Override
     public boolean bilgilerGecerliMi() {
         return !(this.hastaTc == null
@@ -134,5 +116,4 @@ public class RandevuAl extends DbConnection implements IBilgiKontrol {
     public void setDoktorAd(String doktorAd) {
         this.doktorAd = doktorAd;
     }  
-
 }

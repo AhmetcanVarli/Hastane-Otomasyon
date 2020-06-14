@@ -51,59 +51,55 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="girisLabel" alignment="0" min="-2" pref="511" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="HastaLabel" min="-2" pref="181" max="-2" attributes="0"/>
-                              <Component id="hasta_girisButon" linkSize="1" min="-2" pref="180" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="doktor_girisButon" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="DoktorLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          <Component id="covidLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="HastaLabel" alignment="1" min="-2" pref="181" max="-2" attributes="0"/>
+                              <Component id="hasta_girisButon" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="DoktorLabel" max="32767" attributes="0"/>
+                              <Component id="doktor_girisButon" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="girisLabel" min="-2" pref="511" max="-2" attributes="0"/>
+                          <EmptySpace pref="31" max="32767" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="61" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="girisLabel" min="-2" pref="132" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="HastaLabel" pref="242" max="32767" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="hasta_girisButon" linkSize="2" min="-2" pref="54" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="DoktorLabel" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="doktor_girisButon" linkSize="2" min="-2" pref="51" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="girisLabel" min="-2" pref="132" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                  <Component id="covidLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="DoktorLabel" pref="225" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="doktor_girisButon" linkSize="2" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="HastaLabel" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="hasta_girisButon" linkSize="2" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -164,21 +160,11 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="covidLabel">
+        <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/giris/iconlar/covid.png"/>
+              <Image iconType="3" name="/giris/iconlar/sagl&#x131;k_bakanl&#x131;g&#x131;.png"/>
             </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="covidLabelMouseClicked"/>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="covidLabelMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="covidLabelMouseExited"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="COV&#x130;D-19 B&#x130;LG&#x130;LEND&#x130;RME"/>
           </Properties>
         </Component>
       </SubComponents>

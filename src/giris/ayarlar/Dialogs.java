@@ -3,7 +3,6 @@ package giris.ayarlar;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-
 public class Dialogs {
     
     public static void bosOlamazMesajGoster(JFrame frame){
@@ -17,7 +16,7 @@ public class Dialogs {
     }
     public static int onayMesajGoster(JFrame frame,String mesaj){
         int optionType = JOptionPane.YES_NO_OPTION;
-        int selected = JOptionPane.showConfirmDialog(frame, mesaj, "UYARU", optionType);
+        int selected = JOptionPane.showConfirmDialog(frame, mesaj, "UYARI", optionType);
         if (optionType == selected) {
             return 1;
         }

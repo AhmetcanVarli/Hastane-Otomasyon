@@ -15,7 +15,7 @@ import java.awt.Color;
 public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBilgiKontrol {
 
     private hastaBasvuru hastaBasvuruObject = null;
-
+    
     public kayıtekran() {
         initComponents();
         Duzenle();
@@ -38,6 +38,7 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
         }
         return hastaBasvuruObject;
     }
+    
 
     @Override
     public boolean bilgilerGecerliMi() {
@@ -65,10 +66,8 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
         cinsiyetBox = new javax.swing.JComboBox<>();
         telefonText = new javax.swing.JTextField();
         sifreLabel = new javax.swing.JLabel();
-        sifretekrarLabel = new javax.swing.JLabel();
         güvenliksoruLabel = new javax.swing.JLabel();
         sifreText = new javax.swing.JPasswordField();
-        sifretekrarText = new javax.swing.JPasswordField();
         güvenliksoruBox = new javax.swing.JComboBox<>();
         güvenlikcevapLabel = new javax.swing.JLabel();
         güvenlikcevapText = new javax.swing.JTextField();
@@ -99,15 +98,11 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
         TelefonLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         TelefonLabel.setText("TELEFON:");
 
-        cinsiyetBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ERKEK", "KADIN ", " " }));
+        cinsiyetBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ERKEK", "KADIN " }));
 
         sifreLabel.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         sifreLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         sifreLabel.setText("ŞİFRE:");
-
-        sifretekrarLabel.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        sifretekrarLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        sifretekrarLabel.setText("ŞİFRE TEKRAR:");
 
         güvenliksoruLabel.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         güvenliksoruLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -159,54 +154,51 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
             kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kayıtPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(kayıtPanelLayout.createSequentialGroup()
-                            .addComponent(soyadLabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(SoyadText, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
+                        .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(kimlikLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(soyadLabel)
                                 .addGap(18, 18, 18)
-                                .addComponent(KimlikText))
-                            .addGroup(kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(adLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(AdText))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(TelefonLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(telefonText))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(sifreLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(sifreText))
-                            .addGroup(kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(sifretekrarLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(sifretekrarText))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(güvenliksoruLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(güvenliksoruBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(güvenlikcevapLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(güvenlikcevapText))
-                            .addGroup(kayıtPanelLayout.createSequentialGroup()
-                                .addComponent(cinsiyetLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(cinsiyetBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(kayıtPanelLayout.createSequentialGroup()
+                                .addComponent(SoyadText, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(kayıtPanelLayout.createSequentialGroup()
+                                    .addComponent(kimlikLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(KimlikText))
+                                .addGroup(kayıtPanelLayout.createSequentialGroup()
+                                    .addComponent(adLabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(AdText))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
+                                    .addComponent(TelefonLabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(telefonText))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
+                                    .addComponent(sifreLabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(sifreText))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
+                                    .addComponent(güvenliksoruLabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(güvenliksoruBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
+                                    .addComponent(güvenlikcevapLabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(güvenlikcevapText))
+                                .addGroup(kayıtPanelLayout.createSequentialGroup()
+                                    .addComponent(cinsiyetLabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cinsiyetBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(40, 40, 40)
+                        .addComponent(geriOkLabel)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
                         .addComponent(KayıtOlButon, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)))
-                .addGap(40, 40, 40)
-                .addComponent(geriOkLabel)
-                .addGap(19, 19, 19))
+                        .addGap(208, 208, 208))))
         );
 
-        kayıtPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {TelefonLabel, adLabel, cinsiyetLabel, güvenlikcevapLabel, güvenliksoruLabel, kimlikLabel, sifreLabel, sifretekrarLabel});
+        kayıtPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {TelefonLabel, adLabel, cinsiyetLabel, güvenlikcevapLabel, güvenliksoruLabel, kimlikLabel, sifreLabel});
 
         kayıtPanelLayout.setVerticalGroup(
             kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,7 +207,7 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
                 .addComponent(geriOkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kayıtPanelLayout.createSequentialGroup()
-                .addContainerGap(66, Short.MAX_VALUE)
+                .addContainerGap(68, Short.MAX_VALUE)
                 .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(kimlikLabel)
                     .addComponent(KimlikText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -241,22 +233,18 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
                     .addComponent(sifreText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sifretekrarLabel)
-                    .addComponent(sifretekrarText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(güvenliksoruLabel)
                     .addComponent(güvenliksoruBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(kayıtPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(güvenlikcevapLabel)
                     .addComponent(güvenlikcevapText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(KayıtOlButon, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(32, 32, 32))
         );
 
-        kayıtPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AdText, KimlikText, TelefonLabel, adLabel, cinsiyetBox, cinsiyetLabel, güvenlikcevapLabel, güvenlikcevapText, güvenliksoruBox, güvenliksoruLabel, kimlikLabel, sifreLabel, sifreText, sifretekrarLabel, sifretekrarText, telefonText});
+        kayıtPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AdText, KimlikText, TelefonLabel, adLabel, cinsiyetBox, cinsiyetLabel, güvenlikcevapLabel, güvenlikcevapText, güvenliksoruBox, güvenliksoruLabel, kimlikLabel, sifreLabel, sifreText, telefonText});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -282,12 +270,13 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
 
     private void KayıtOlButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KayıtOlButonActionPerformed
         if (this.bilgilerGecerliMi()) {
-            this.kayıtOlustur();
+                this.kayıtOlustur();
         } else {
             Dialogs.bosOlamazMesajGoster(this);
         }
     }//GEN-LAST:event_KayıtOlButonActionPerformed
 
+    
     public void kayıtOlustur() {
       
         this.getHastaBasvuruObject().setAd(this.AdText.getText().trim());
@@ -296,7 +285,6 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
         this.getHastaBasvuruObject().setTelNo(this.telefonText.getText().trim());
         this.getHastaBasvuruObject().setCinsiyet(String.valueOf(this.cinsiyetBox.getSelectedItem()));
         this.getHastaBasvuruObject().setSifre(String.valueOf(this.sifreText.getPassword()));
-        this.getHastaBasvuruObject().setSifreTekrar(String.valueOf(this.sifretekrarText.getPassword()));
         this.getHastaBasvuruObject().setGuvenlikSorusu(String.valueOf(this.güvenliksoruBox.getSelectedItem()));
         this.getHastaBasvuruObject().setGuvenlikCevap(this.güvenlikcevapText.getText().trim());
        
@@ -349,8 +337,6 @@ public class kayıtekran extends javax.swing.JFrame implements IDuzenleyici, IBi
     private javax.swing.JLabel kimlikLabel;
     private javax.swing.JLabel sifreLabel;
     private javax.swing.JPasswordField sifreText;
-    private javax.swing.JLabel sifretekrarLabel;
-    private javax.swing.JPasswordField sifretekrarText;
     private javax.swing.JLabel soyadLabel;
     private javax.swing.JTextField telefonText;
     // End of variables declaration//GEN-END:variables

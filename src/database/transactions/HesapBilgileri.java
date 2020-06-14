@@ -1,4 +1,3 @@
-
 package database.transactions;
 
 import database.DbVeriMerkezi;
@@ -25,19 +24,17 @@ public class HesapBilgileri extends DbVeriMerkezi implements IBilgiKontrol{
         this.doktoruAl(doktorKimlik);
     }
     
-    
-    
     private void hastayiAl(String hastaKimlik){
         String query = "SELECT * FROM hastalar WHERE "
-                + " tc_no = '" + hastaKimlik + "'";
+                + " TcNo = '" + hastaKimlik + "'";
         try {
             super.statement = super.connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
             while(rs.next()){
-                super.tcNo = rs.getNString("tc_no");
-                super.ad = rs.getNString("ad");
-                super.soyad = rs.getNString("soyad");
-                super.telNo = rs.getNString("telefon");
+                super.tcNo = rs.getNString("TcNo");
+                super.ad = rs.getNString("Ad");
+                super.soyad = rs.getNString("Soyad");
+                super.telNo = rs.getNString("Telefon");
             }
         } catch (SQLException ex) {
             Logger.getLogger(HesapBilgileri.class.getName()).log(Level.SEVERE, null, ex);
@@ -45,25 +42,16 @@ public class HesapBilgileri extends DbVeriMerkezi implements IBilgiKontrol{
     }
     
     private void doktoruAl(String doktorKimlik){
-        String query = "SELECT * FROM doktorlar WHERE tc_no = '" + doktorKimlik + "'";
+        String query = "SELECT * FROM doktorlar WHERE TcNo = '" + doktorKimlik + "'";
                         
         try {
             super.statement = super.connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
             while(rs.next()){
-                super.DoktorTcNO = rs.getNString("tc_no");
-                super.DoktorAd = rs.getNString("ad");
-                super.DoktorSoyad = rs.getNString("soyad");
+                super.DoktorTcNO = rs.getNString("TcNo");
+                super.DoktorAd = rs.getNString("Ad");
+                super.DoktorSoyad = rs.getNString("Soyad");
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(HesapBilgileri.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-    private void doktoruSec(){
-        String query = "SELECT * FROM doktorlar WHERE klinik ";
-        try {
-            super.statement = super.connection.createStatement();
         } catch (SQLException ex) {
             Logger.getLogger(HesapBilgileri.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -77,7 +65,5 @@ public class HesapBilgileri extends DbVeriMerkezi implements IBilgiKontrol{
     @Override
     public HesapBilgileri getHesapBilgileri() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-           
+    }          
 }

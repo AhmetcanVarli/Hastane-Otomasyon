@@ -1,24 +1,18 @@
 package giris;
 
 import java.sql.*;
-import javax.swing.*;
 import database.DbConnection;
-import database.DbVeriMerkezi;
 import database.IBilgiKontrol;
 import database.transactions.HesapBilgileri;
 import database.transactions.RandevuAl;
-import database.transactions.RandevuAl;
-import giris.HastaKontrolPanel;
 import giris.ayarlar.ActionAyarları;
 import giris.ayarlar.IDuzenleyici;
 import giris.ayarlar.IconAyarları;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
 public class RandevuGecmisi extends javax.swing.JFrame implements IDuzenleyici, IBilgiKontrol {
@@ -66,9 +60,11 @@ public class RandevuGecmisi extends javax.swing.JFrame implements IDuzenleyici, 
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Randevu Geçmişi");
+        setPreferredSize(new java.awt.Dimension(659, 617));
         setResizable(false);
 
         RandevuGecmisiPanel.setBackground(new java.awt.Color(0, 153, 153));
+        RandevuGecmisiPanel.setPreferredSize(new java.awt.Dimension(659, 317));
 
         geriOkLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/giris/iconlar/geriOk.png"))); // NOI18N
         geriOkLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,23 +79,20 @@ public class RandevuGecmisi extends javax.swing.JFrame implements IDuzenleyici, 
             }
         });
 
+        randevuTablo.setBackground(new java.awt.Color(0, 204, 204));
         randevuTablo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Klinik", "Doktor", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        randevuTablo.setBackground(new java.awt.Color(0, 204, 204));
         randevuTablo.setToolTipText("");
         jScrollPane1.setViewportView(randevuTablo);
 
-        ListeleButon.setText("Randevuları Görüntüle");
         ListeleButon.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ListeleButon.setText("Randevuları Görüntüle");
         ListeleButon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ListeleButonActionPerformed(evt);
@@ -111,16 +104,15 @@ public class RandevuGecmisi extends javax.swing.JFrame implements IDuzenleyici, 
         RandevuGecmisiPanelLayout.setHorizontalGroup(
             RandevuGecmisiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RandevuGecmisiPanelLayout.createSequentialGroup()
-                .addGroup(RandevuGecmisiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RandevuGecmisiPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(geriOkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(RandevuGecmisiPanelLayout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(ListeleButon, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(geriOkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RandevuGecmisiPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ListeleButon, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(178, 178, 178))
         );
         RandevuGecmisiPanelLayout.setVerticalGroup(
             RandevuGecmisiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,26 +120,25 @@ public class RandevuGecmisi extends javax.swing.JFrame implements IDuzenleyici, 
                 .addGroup(RandevuGecmisiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RandevuGecmisiPanelLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(geriOkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(RandevuGecmisiPanelLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(123, 123, 123)
-                .addComponent(ListeleButon, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(523, Short.MAX_VALUE))
+                        .addComponent(geriOkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(135, 135, 135))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RandevuGecmisiPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)))
+                .addComponent(ListeleButon, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(RandevuGecmisiPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(RandevuGecmisiPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(RandevuGecmisiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(RandevuGecmisiPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
         );
 
         pack();
@@ -170,7 +161,7 @@ public class RandevuGecmisi extends javax.swing.JFrame implements IDuzenleyici, 
         Connection con;
         DbConnection dcon = new DbConnection();
         con = dcon.returnConnection();
-        String query = "SELECT klinik,doktor_ad_soyad,tarih,saat FROM randevular WHERE hasta_tc_no = '" + getHesapBilgileri().getTcNo() + "'";
+        String query = "SELECT Klinik,DoktorAdSoyad,Tarih,Saat FROM randevular WHERE HastaTcNo = '" + getHesapBilgileri().getTcNo() + "'";
         Statement stmt;
         ResultSet rs;
         try {

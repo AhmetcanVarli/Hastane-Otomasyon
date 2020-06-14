@@ -166,13 +166,12 @@
         <Component class="javax.swing.JComboBox" name="KlinikComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
+              <StringArray count="5">
                 <StringItem index="0" value="Di&#x15f; Hekimli&#x11f;i"/>
                 <StringItem index="1" value="G&#xf6;z Hastal&#x131;klar&#x131;"/>
                 <StringItem index="2" value="&#x130;&#xe7; Hastal&#x131;klar&#x131;(Dahiliye)"/>
                 <StringItem index="3" value="Kalp Damar Cerrahisi"/>
                 <StringItem index="4" value="N&#xf6;rolaji"/>
-                <StringItem index="5" value=" "/>
               </StringArray>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -212,7 +211,7 @@
         <Component class="javax.swing.JComboBox" name="SaatComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="19">
+              <StringArray count="17">
                 <StringItem index="0" value="08:00"/>
                 <StringItem index="1" value="08:30"/>
                 <StringItem index="2" value="09:00"/>
@@ -222,16 +221,14 @@
                 <StringItem index="6" value="11:00"/>
                 <StringItem index="7" value="11:30"/>
                 <StringItem index="8" value="12:00"/>
-                <StringItem index="9" value="12:30"/>
-                <StringItem index="10" value="13:00"/>
-                <StringItem index="11" value="13:30"/>
-                <StringItem index="12" value="14:00"/>
-                <StringItem index="13" value="14:30"/>
-                <StringItem index="14" value="15:00"/>
-                <StringItem index="15" value="15:30"/>
-                <StringItem index="16" value="16.00"/>
-                <StringItem index="17" value="16:30"/>
-                <StringItem index="18" value="17:00"/>
+                <StringItem index="9" value="13:30"/>
+                <StringItem index="10" value="14:00"/>
+                <StringItem index="11" value="14:30"/>
+                <StringItem index="12" value="15:00"/>
+                <StringItem index="13" value="15:30"/>
+                <StringItem index="14" value="16.00"/>
+                <StringItem index="15" value="16:30"/>
+                <StringItem index="16" value="17:00"/>
               </StringArray>
             </Property>
           </Properties>
@@ -242,13 +239,12 @@
         <Component class="javax.swing.JComboBox" name="TarihComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
+              <StringArray count="5">
                 <StringItem index="0" value="Pazartesi"/>
                 <StringItem index="1" value="Sal&#x131;"/>
                 <StringItem index="2" value="&#xc7;ar&#x15f;amba"/>
                 <StringItem index="3" value="Per&#x15f;embe"/>
                 <StringItem index="4" value="Cuma"/>
-                <StringItem index="5" value=" "/>
               </StringArray>
             </Property>
           </Properties>

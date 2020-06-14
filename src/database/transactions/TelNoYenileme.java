@@ -1,4 +1,3 @@
-
 package database.transactions;
 
 import database.DbConnection;
@@ -13,10 +12,9 @@ public class TelNoYenileme extends DbConnection implements IBilgiKontrol{
     
     private String telNo = null;
 
-    
     public boolean telNoYenilendiMi(){
         if(bilgilerGecerliMi()){
-            String query = "UPDATE hastalar SET telefon = '" + this.telNo + "'WHERE tc_no = '" + getHesapBilgileri().getTcNo() + "'";
+            String query = "UPDATE hastalar SET telefon = '" + this.telNo + "'WHERE TcNo = '" + getHesapBilgileri().getTcNo() + "'";
             try {
                 super.statement = super.connection.createStatement();
                 statement.executeUpdate(query);
@@ -48,8 +46,4 @@ public class TelNoYenileme extends DbConnection implements IBilgiKontrol{
     public void setTelNo(String telNo) {
         this.telNo = telNo;
     }
-    
-    
-    
-    
 }

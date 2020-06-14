@@ -45,66 +45,63 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="soyadLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="SoyadText" min="-2" pref="229" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="kimlikLabel" linkSize="1" min="-2" pref="141" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="KimlikText" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="adLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="AdText" max="32767" attributes="0"/>
-                              </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="TelefonLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="soyadLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="telefonText" max="32767" attributes="0"/>
+                                  <Component id="SoyadText" min="-2" pref="229" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="sifreLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="sifreText" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="sifretekrarLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="sifretekrarText" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="güvenliksoruLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="güvenliksoruBox" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="güvenlikcevapLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="güvenlikcevapText" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="cinsiyetLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="cinsiyetBox" min="-2" pref="229" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="kimlikLabel" linkSize="1" min="-2" pref="141" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="KimlikText" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="adLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="AdText" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="TelefonLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="telefonText" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="sifreLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="sifreText" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="güvenliksoruLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="güvenliksoruBox" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="güvenlikcevapLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="güvenlikcevapText" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="cinsiyetLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="cinsiyetBox" min="-2" pref="229" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="geriOkLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="KayıtOlButon" min="-2" pref="125" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="geriOkLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -116,7 +113,7 @@
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="66" max="32767" attributes="0"/>
+                  <EmptySpace pref="68" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="kimlikLabel" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="KimlikText" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -148,11 +145,6 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="sifretekrarLabel" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="sifretekrarText" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="güvenliksoruLabel" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="güvenliksoruBox" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -161,9 +153,9 @@
                       <Component id="güvenlikcevapLabel" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="güvenlikcevapText" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="KayıtOlButon" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -212,10 +204,9 @@
         <Component class="javax.swing.JComboBox" name="cinsiyetBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="2">
                 <StringItem index="0" value="ERKEK"/>
                 <StringItem index="1" value="KADIN "/>
-                <StringItem index="2" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -234,15 +225,6 @@
             <Property name="text" type="java.lang.String" value="&#x15e;&#x130;FRE:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="sifretekrarLabel">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="16" style="1"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="&#x15e;&#x130;FRE TEKRAR:"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="g&#xfc;venliksoruLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -253,8 +235,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="sifreText">
-        </Component>
-        <Component class="javax.swing.JPasswordField" name="sifretekrarText">
         </Component>
         <Component class="javax.swing.JComboBox" name="g&#xfc;venliksoruBox">
           <Properties>

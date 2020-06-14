@@ -1,4 +1,3 @@
-
 package giris;
 
 import database.IBilgiKontrol;
@@ -43,8 +42,7 @@ public class RandevuAlEkranı extends javax.swing.JFrame implements IDuzenleyici
         return HesapBilgileri.getInstance();
     }
     
-     
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -96,7 +94,7 @@ public class RandevuAlEkranı extends javax.swing.JFrame implements IDuzenleyici
         RandSaatiLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         RandSaatiLabel.setText("RANDEVU SAATİ:");
 
-        KlinikComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diş Hekimliği", "Göz Hastalıkları", "İç Hastalıkları(Dahiliye)", "Kalp Damar Cerrahisi", "Nörolaji", " " }));
+        KlinikComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diş Hekimliği", "Göz Hastalıkları", "İç Hastalıkları(Dahiliye)", "Kalp Damar Cerrahisi", "Nörolaji" }));
         KlinikComboBox.setToolTipText("");
         KlinikComboBox.setBorder(null);
         KlinikComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -110,9 +108,9 @@ public class RandevuAlEkranı extends javax.swing.JFrame implements IDuzenleyici
             }
         });
 
-        SaatComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16.00", "16:30", "17:00" }));
+        SaatComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16.00", "16:30", "17:00" }));
 
-        TarihComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", " " }));
+        TarihComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma" }));
 
         javax.swing.GroupLayout RandevuAlPanelLayout = new javax.swing.GroupLayout(RandevuAlPanel);
         RandevuAlPanel.setLayout(RandevuAlPanelLayout);

@@ -1,12 +1,20 @@
 package giris;
 
+import database.DbConnection;
 import database.IBilgiKontrol;
 import database.transactions.HesapBilgileri;
 import database.transactions.ReceteYaz;
 import giris.ayarlar.Dialogs;
 import giris.ayarlar.textAyar;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import net.proteanit.sql.DbUtils;
 
 public class ReceteYazEkran extends javax.swing.JFrame implements IBilgiKontrol{
 

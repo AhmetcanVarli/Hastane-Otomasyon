@@ -12,9 +12,8 @@ import java.util.logging.Logger;
 public class hastaBasvuru extends DbConnection  implements IBilgiKontrol{
 
     private String ad = null, soyad = null, tcNo = null, telNo = null, cinsiyet = null;
-    private String guvenlikSorusu = null, guvenlikCevap = null, sifre = null, sifreTekrar = null;
+    private String guvenlikSorusu = null, guvenlikCevap = null, sifre = null;
 
-    
     public boolean kayıtOnaylandiMi(){
         if(this.bilgilerGecerliMi()){
             if(this.tcNoTablodaVarMi()){
@@ -29,7 +28,7 @@ public class hastaBasvuru extends DbConnection  implements IBilgiKontrol{
     }
     
     private boolean tcNoTablodaVarMi(){
-        String query = "SELECT tc_no FROM hastalar WHERE tc_no = '" + this.tcNo + "'";
+        String query = "SELECT TcNo FROM hastalar WHERE TcNo = '" + this.tcNo + "'";
         try {
             super.statement = super.connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -42,7 +41,7 @@ public class hastaBasvuru extends DbConnection  implements IBilgiKontrol{
         return false;
     }
     private void kaydıOnayla(){
-        String query = "INSERT INTO hastalar(tc_no,ad,soyad,cinsiyet,telefon,sifre,sifre_tekrar,guvenlik_sorusu,guvenlik_cevap)"
+        String query = "INSERT INTO hastalar(TcNo,Ad,Soyad,Cinsiyet,Telefon,Sifre,GuvenlikSorusu,GuvenlikCevap)"
                 + " VALUES("
                 + "'" + this.tcNo + "',"
                 + "'" + this.ad + "',"
@@ -50,7 +49,6 @@ public class hastaBasvuru extends DbConnection  implements IBilgiKontrol{
                 + "'" + this.cinsiyet + "',"
                 + "'" + this.telNo + "',"
                 + "'" + this.sifre + "',"
-                + "'" + this.sifreTekrar + "',"
                 + "'" + this.guvenlikSorusu + "',"
                 + "'" + this.guvenlikCevap + "'"
                 + ")";
@@ -68,7 +66,6 @@ public class hastaBasvuru extends DbConnection  implements IBilgiKontrol{
                 || this.tcNo == null
                 || this.telNo == null
                 || this.sifre == null
-                || this.sifreTekrar == null
                 || this.guvenlikSorusu == null
                 || this.guvenlikCevap == null
                 || textAyar.uzunlukAyarı(11, this.tcNo)
@@ -79,8 +76,6 @@ public class hastaBasvuru extends DbConnection  implements IBilgiKontrol{
     public HesapBilgileri getHesapBilgileri() {
         return HesapBilgileri.getInstance();
     }
-    
-    
 
     public String getAd() {
         return ad;
@@ -145,14 +140,4 @@ public class hastaBasvuru extends DbConnection  implements IBilgiKontrol{
     public void setSifre(String sifre) {
         this.sifre = sifre;
     }
-
-    public String getSifreTekrar() {
-        return sifreTekrar;
-    }
-
-    public void setSifreTekrar(String sifreTekrar) {
-        this.sifreTekrar = sifreTekrar;
-    }
-    
-    
 }

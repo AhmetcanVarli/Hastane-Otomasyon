@@ -37,7 +37,7 @@ public final class HastaEkranı extends javax.swing.JFrame implements IDuzenleyi
         kimlikText.setText(KIMLIK_TEXT_ORIGINAL);
         sifreText.setText(SIFRE_TEXT_ORIGINAL);
         textAyar.sayıAyarla(kimlikText);
-
+       // textAyar.limitAyar(kimlikText, 11);
     }
 
     @Override
@@ -284,7 +284,6 @@ public final class HastaEkranı extends javax.swing.JFrame implements IDuzenleyi
         if (this.bilgilerGecerliMi()) {
             String hastaKimlik = this.kimlikText.getText().trim();
             String sifre = String.valueOf(this.sifreText.getPassword());
-            textAyar.LimitAyari(kimlikText);
             this.girisYap(hastaKimlik, sifre);
         } else {
             Dialogs.bosOlamazMesajGoster(this);

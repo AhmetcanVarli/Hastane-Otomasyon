@@ -4,7 +4,6 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-
 public class IconAyarları {
     
     private static Icon originalIcon;

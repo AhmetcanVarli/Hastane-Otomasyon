@@ -1,4 +1,3 @@
-
 package database.transactions;
 
 import database.DbConnection;
@@ -18,11 +17,11 @@ public class SifreYenileme extends DbConnection implements IBilgiKontrol{
     
     public boolean SifreYenilendiMi(){
         if(bilgilerGecerliMi()){
-                String query = "UPDATE hastalar SET sifre = '" + this.yeniSifre + "'"
-                        +"WHERE tc_no = '" + this.tcNo + "' AND telefon = '" + this.telNo + "'"
-                        +"AND guvenlik_cevap = '" + this.guvenlikCevap + "'";
+                String query = "UPDATE hastalar SET Sifre = '" + this.yeniSifre + "'"
+                        +"WHERE TcNo = '" + this.tcNo + "' AND Telefon = '" + this.telNo + "'"
+                        +"AND GuvenlikCevap = '" + this.guvenlikCevap + "'";
                 if(this.eskiSifre != null){
-                    query += "AND sifre = '" + this.eskiSifre + "'";
+                    query += "AND Sifre = '" + this.eskiSifre + "'";
                 }
             try{    
                 super.statement = super.connection.createStatement();
@@ -88,7 +87,5 @@ public class SifreYenileme extends DbConnection implements IBilgiKontrol{
     public void setYeniSifre(String yeniSifre) {
         this.yeniSifre = yeniSifre;
     }
-    
-    
-    
+     
 }

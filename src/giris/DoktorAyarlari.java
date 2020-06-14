@@ -1,4 +1,3 @@
-
 package giris;
 
 import database.IBilgiKontrol;
@@ -11,13 +10,32 @@ import giris.ayarlar.textAyar;
 
 public class DoktorAyarlari extends javax.swing.JFrame implements IDuzenleyici, IBilgiKontrol{
 
-   
+
     public DoktorAyarlari() {
         initComponents();
         Duzenle();
     }
+    public void Duzenle() {
+        this.setLocationRelativeTo(null);
+        DoktorAyarPanel.setFocusable(true);
+        this.tcKimlikText.setText(getHesapBilgileri().getDoktorTcNO());
+        this.tcKimlikText.setEnabled(false);
+        this.adText.setText(getHesapBilgileri().getDoktorAd());
+        this.adText.setEnabled(false);
+        this.soyadText.setText(getHesapBilgileri().getDoktorSoyad());
+        this.soyadText.setEnabled(false);
+    }
 
-   
+    @Override
+    public boolean bilgilerGecerliMi() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public HesapBilgileri getHesapBilgileri() {
+        return HesapBilgileri.getInstance();
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -122,30 +140,6 @@ public class DoktorAyarlari extends javax.swing.JFrame implements IDuzenleyici, 
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    @Override
-    public void Duzenle() {
-        this.setLocationRelativeTo(null);
-        DoktorAyarPanel.setFocusable(true);
-        this.tcKimlikText.setText(getHesapBilgileri().getDoktorTcNO());
-        this.tcKimlikText.setEnabled(false);
-        this.adText.setText(getHesapBilgileri().getDoktorAd());
-        this.adText.setEnabled(false);
-        this.soyadText.setText(getHesapBilgileri().getDoktorSoyad());
-        this.soyadText.setEnabled(false);
-    }
-
-    @Override
-    public boolean bilgilerGecerliMi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public HesapBilgileri getHesapBilgileri() {
-        return HesapBilgileri.getInstance();
-    }
-    
-    
     
     private void GeriLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GeriLabelMouseClicked
         ActionAyarları.setVisible(this, new DoktorKontrolPaneli());

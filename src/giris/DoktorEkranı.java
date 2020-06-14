@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package giris;
 
 import database.DbConnection;
@@ -19,10 +14,6 @@ import java.awt.Color;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-/**
- *
- * @author rap_c
- */
 public final class DoktorEkranı extends javax.swing.JFrame implements IDuzenleyici, IBilgiKontrol{
 
     private DoktorGiris doktorGirisObject = null;
@@ -67,6 +58,7 @@ public final class DoktorEkranı extends javax.swing.JFrame implements IDuzenley
         DoktorSifreLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         DoktorSifreLabel.setText("ŞİFRE :");
 
+        DoktorKimlikText.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         DoktorKimlikText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 DoktorKimlikTextFocusGained(evt);
@@ -76,6 +68,7 @@ public final class DoktorEkranı extends javax.swing.JFrame implements IDuzenley
             }
         });
 
+        DoktorSifreText.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         DoktorSifreText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 DoktorSifreTextFocusGained(evt);
@@ -258,7 +251,6 @@ public final class DoktorEkranı extends javax.swing.JFrame implements IDuzenley
        if(this.bilgilerGecerliMi()){
            String doktorKimlik = this.DoktorKimlikText.getText().trim();
            String sifre = String.valueOf(this.DoktorSifreText.getPassword());
-           textAyar.LimitAyari(DoktorKimlikText);
            this.girisYap(doktorKimlik, sifre);
        }else{
            Dialogs.bosOlamazMesajGoster(this);

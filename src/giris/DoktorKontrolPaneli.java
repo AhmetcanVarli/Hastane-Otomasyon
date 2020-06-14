@@ -1,4 +1,3 @@
-
 package giris;
 
 import database.IBilgiKontrol;
@@ -308,7 +307,7 @@ public class DoktorKontrolPaneli extends javax.swing.JFrame implements IDuzenley
     }//GEN-LAST:event_DoktorAyarLabelMouseExited
 
     private void HastalarButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HastalarButonActionPerformed
-        new ReceteGecmisiEkranı().setVisible(true);
+        new HastalarimEkrani().setVisible(true);
     }//GEN-LAST:event_HastalarButonActionPerformed
 
     private void RandevularButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RandevularButonActionPerformed

@@ -1,6 +1,4 @@
-
 package database;
-
 
 public class DbVeriMerkezi extends DbConnection{
     
@@ -61,9 +59,5 @@ public class DbVeriMerkezi extends DbConnection{
 
     public void setDoktorTcNO(String DoktorTcNO) {
         this.DoktorTcNO = DoktorTcNO;
-    }
-
-  
-    
-    
+    }  
 }

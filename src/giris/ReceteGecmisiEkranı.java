@@ -40,7 +40,7 @@ public class ReceteGecmisiEkranı extends javax.swing.JFrame implements IBilgiKo
         ReceteGoruntuleButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Hastalar");
+        setTitle("Reçeteler");
         setResizable(false);
 
         HastalarPanel.setBackground(new java.awt.Color(0, 153, 153));

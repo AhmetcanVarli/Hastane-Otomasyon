@@ -90,7 +90,7 @@ public class SifremiUnuttumEkranı extends javax.swing.JFrame implements IDuzenl
 
         CevapLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         CevapLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        CevapLabel.setText("CEVAP:");
+        CevapLabel.setText("GÜVENLİK CEVAP:");
 
         YeniSifreLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         YeniSifreLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -157,11 +157,11 @@ public class SifremiUnuttumEkranı extends javax.swing.JFrame implements IDuzenl
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(SifreUnuttumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(TCnoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CevapLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(EskiSifreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(YeniSifreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(telefonNoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SifreTekrarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(SifreTekrarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CevapLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(SifreUnuttumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CevapText)
@@ -175,8 +175,6 @@ public class SifremiUnuttumEkranı extends javax.swing.JFrame implements IDuzenl
                         .addComponent(SifreYenileButon, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
-
-        SifreUnuttumPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CevapLabel, YeniSifreLabel});
 
         SifreUnuttumPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CevapText, EskiSifreText, SifreTekrarText, TCnoText, YeniŞifreText});
 

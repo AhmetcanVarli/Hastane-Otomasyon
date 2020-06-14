@@ -3,14 +3,13 @@ package database.transactions;
 
 import database.DbConnection;
 import database.IBilgiKontrol;
-import giris.ReceteYazEkran;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ReceteYaz extends DbConnection implements IBilgiKontrol{
     
-    ReceteYazEkran receteYazEkranObject = new ReceteYazEkran();
     
     private String hastaTc = null, hastaAd = null, hastaSoyad = null;
     private String doktorAd = null, tarih = null, saat = null;
@@ -18,11 +17,29 @@ public class ReceteYaz extends DbConnection implements IBilgiKontrol{
     
     public boolean receteYaz(){
         if(this.bilgilerGecerliMi()){
-            this.recete();
-            return true;
+            if(this.tcnoKontrol()){
+                this.recete();
+                return true;
+            }else{
+                return false;
+            }
         }else{
             return false;
         }
+    }
+    private boolean tcnoKontrol(){
+        String query = "SELECT TcNo FROM hastalar WHERE TcNo = '" + this.hastaTc + "'";
+        try {
+            super.statement = super.connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {                
+             return true;
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ReceteYaz.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
     
     private void recete(){
@@ -119,9 +136,4 @@ public class ReceteYaz extends DbConnection implements IBilgiKontrol{
     public void setHastaSoyad(String hastaSoyad) {
         this.hastaSoyad = hastaSoyad;
     }
-    
-    
-    
-    
-    
 }
