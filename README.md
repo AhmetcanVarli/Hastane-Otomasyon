@@ -1,2 +1,2 @@
 # Hastane Otomasyon
-##```.sql```
+##```.sql```dosyası
